@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Install oh-my-zsh and customization
 sudo apt-get install -y zsh fonts-powerline
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
