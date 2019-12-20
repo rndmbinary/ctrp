@@ -14,7 +14,7 @@ git clone git@github:janjoswig/Ducula.git ${ZSH_CUSTOM}/themes/Ducula
 sudo sed -i 's/ZSH_THEME\="\w+"/ZSH_THEME\="Ducula\/ducula"/' ~/.zshrc
 sudo sed -i 's/plugins\=\(git\)/plugins\=(git git-prompt command-not-found common-aliases encode64 history urltools\)/' ~/.zshrc
 sudo chown $USER ~/.zsh_history
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/nvim
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/nvim/zsh-syntax-highlighting
 echo 'source ~/.config/nvim/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh' >> ~/.zshrc
 source ~/.zshrc
 
@@ -35,3 +35,5 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $OSQUERY_KEY
 sudo add-apt-repository 'deb [arch=amd64] https://pkg.osquery.io/deb deb main'
 sudo apt-get update
 sudo apt-get install osquery
+
+/bin/zsh
