@@ -15,7 +15,7 @@ sudo sed -i 's/ZSH_THEME\="\w+"/ZSH_THEME\="Ducula\/ducula"/' ~/.zshrc
 sudo sed -i 's/plugins\=\(git\)/plugins\=(git git-prompt command-not-found common-aliases encode64 history urltools\)/' ~/.zshrc
 sudo chown $USER ~/.zsh_history
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/nvim
-source ~/.config/nvim/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+echo 'source ~/.config/nvim/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh' >> ~/.zshrc
 source ~/.zshrc
 
 # Install sleuthkit
