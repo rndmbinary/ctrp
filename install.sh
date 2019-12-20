@@ -10,7 +10,7 @@ sudo pip3 install yara r2pipe requests scapy bs4 oletools pdfminer.six shodan
 
 # Install terminal customization
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone git@github:janjoswig/Ducula.git ${ZSH_CUSTOM}/themes/Ducula
+sudo git clone git@github:janjoswig/Ducula.git ${ZSH_CUSTOM}/themes/Ducula
 sudo sed -i 's/ZSH_THEME\="\w+"/ZSH_THEME\="Ducula\/ducula"/' ~/.zshrc
 sudo sed -i 's/plugins\=\(git\)/plugins\=(git git-prompt command-not-found common-aliases encode64 history urltools\)/' ~/.zshrc
 sudo chown $USER ~/.zsh_history
