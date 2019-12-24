@@ -1,13 +1,13 @@
 #!/bin/sh
-function check_account {
+function check_account() {
 	# This will check if the script was envoked using su
 	if [[ $EUID -ne 0 ]]; then
 		echo "This script must run using an elevated account. Exiting. . .";
 		exit 1;
 	fi
-}
+};
 
-function stage_ctrp {
+function stage_ctrp() {
 	# Install lots of wares
 	sudo apt-get install -y snapd neovim zsh git yara radare2 python3-pip p7zip-full less volatility tcpdump lynx host w3m libimage-exiftool-perl software-properties-common ranger whois bind9-host nodejs xpdf libemail-outlook-message-perl;
 	sudo snap install powershell --classic;
