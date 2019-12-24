@@ -1,5 +1,5 @@
 #!/bin/sh
-function check_account {
+check_account() {
 	# This will check if the script was envoked using su
 	if [[ $EUID -ne 0 ]]; then
 		echo "This script must run using an elevated account. Exiting. . ."
@@ -7,9 +7,9 @@ function check_account {
 	fi
 }
 
-function stage_ctrp {
+stage_ctrp() {
 	# Install lots of wares
-	sudo apt-get install -y snapd neovim zsh git yara radare2 python3-pip p7zip-full less volatility tcpdump lynx host w3m libimage-exiftool-perl software-properties-common ranger whois bind9-host nodejs xpdf libemail-outlook-message-perl
+	sudo apt-get install -y apt-transport-https snapd neovim zsh git yara radare2 python3-pip p7zip-full less volatility tcpdump lynx host w3m libimage-exiftool-perl software-properties-common ranger whois bind9-host nodejs xpdf libemail-outlook-message-perl
 	sudo snap install powershell --classic
 	sudo curl -L https://www.npmjs.com/install.sh | sh
 	sudo npm install typescript
@@ -41,7 +41,7 @@ function stage_ctrp {
 	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $OSQUERY_KEY
 	sudo add-apt-repository 'deb [arch=amd64] https://pkg.osquery.io/deb deb main'
 	sudo apt-get update
-	sudo apt-get install osquery
+	sudo apt-get install -y osquery
 
 }
 
